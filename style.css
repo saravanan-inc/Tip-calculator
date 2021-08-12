@@ -1,0 +1,74 @@
+:root {
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan1: hsl(186, 39%, 29%);
+    --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --Light-grayish-cyan1: hsl(185, 41%, 84%);
+    --Light-grayish-cyan2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Strong-cyan: hsl(172, 67%, 45%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: var(--Light-grayish-cyan1);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+input:checked + label {
+    background-color: hsl(185, 41%, 84%) !important;
+    color: black !important;
+}
+
+label {
+    width: 70%;
+    padding: 10px 0px !important;
+    font-size: 18px !important;
+}
+
+.custom {
+  width: 70%;
+  padding: 10px !important;
+  font-size: 18px !important;
+  color: white;
+  background-color: hsl(185, 41%, 84%) !important;
+  text-align: right;
+}
+
+.custom::placeholder {
+  color: var(--Dark-grayish-cyan1) !important;
+  opacity: 1 !important; /* Firefox */
+  font-size: 95%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.custom:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: white !important;
+}
+
+.custom::-ms-input-placeholder { /* Microsoft Edge */
+ color: white !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.alert {
+  text-align: center;
+}

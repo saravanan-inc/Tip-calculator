@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container m-auto mt-5 p-auto">
+      <div id="alert" class="col mt-5">
+        <p
+          style="letter-spacing: 10px; color: var(--Very-dark-cyan)"
+          class="text-center opacity-75 fw-bolder fs-4 lh-base"
+        >
+          SPLI<br />TIER
+        </p>
+      </div>
+      <div class="col mt-5">
+        <div class="row bg-light p-5" style="border-radius: 24px">
+          <div class="col-sm-12 col-md-6">
+            <div class="container-fluid">
+              <p class="fw-bolder fs-5 opacity-75">Bill</p>
+              <div
+                class="input-group mb-3"
+                style="border-radius: 10px; overflow: hidden"
+              >
+                <i
+                  class="fas fa-dollar-sign input-group-text border-0"
+                  id="basic-addon1"
+                  style="
+                    background-color: hsl(185, 41%, 94%);
+                    font-size: 16px;
+                    color: hsl(184, 14%, 60%);
+                    align-self: center;
+                    padding: 10px;
+                  "
+                ></i>
+                <input
+                  type="number"
+                  class="form-control border-0"
+                  style="
+                    background-color: hsl(185, 41%, 94%);
+                    text-align: right;
+                    font-size: 18px;
+                    box-shadow: none;
+                  "
+                  placeholder="0"
+                  id="bill"
+                />
+              </div>
+            </div>
+            <div class="container-fluid mt-5">
+              <p class="fw-bolder fs-5 opacity-75">Select Tip %</p>
+              <div class="row">
+                <div class="col-6 col-md-4">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="tips"
+                    id=".5"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-success" for=".5">5%</label>
+                </div>
+                <div class="col-6 col-md-4">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="tips"
+                    id=".10"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-success" for=".10">10%</label>
+                </div>
+                <div class="col-6 col-md-4 mt-sm-0 mt-3">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="tips"
+                    id=".15"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-success" for=".15">15%</label>
+                </div>
+                <div class="col-6 mt-3 col-md-4">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="tips"
+                    id=".25"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-success" for=".25">25%</label>
+                </div>
+                <div class="col-6 mt-3 col-md-4">
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="tips"
+                    id=".50"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-success" for=".50">50%</label>
+                </div>
+                <div class="col-6 mt-3 col-md-4">
+                  <input
+                    type="number"
+                    class="form-control custom"
+                    id="customTip"
+                    placeholder="Custom"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid mt-5">
+              <p class="fw-bolder fs-5 opacity-75">Number of People</p>
+              <div
+                class="input-group mb-3"
+                style="border-radius: 10px; overflow: hidden"
+              >
+                <i
+                  class="fas fa-user input-group-text border-0"
+                  id="basic-addon1"
+                  style="
+                    background-color: hsl(185, 41%, 94%);
+                    font-size: 16px;
+                    color: hsl(184, 14%, 60%);
+                    align-self: center;
+                    padding: 10px;
+                  "
+                ></i>
+                <input
+                  type="number"
+                  class="form-control border-0"
+                  style="
+                    background-color: hsl(185, 41%, 94%);
+                    text-align: right;
+                    font-size: 18px;
+                    box-shadow: none;
+                  "
+                  placeholder="0"
+                  id="people"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-sm-12 col-md-6"
+            style="background: var(--Very-dark-cyan); border-radius: 24px"
+          >
+            <div class="container position-relative">
+              <div class="row mt-5" style="color: white">
+                <div class="col-6">
+                  Tip Amount <br /><span class="opacity-50"> / person</span>
+                </div>
+                <div
+                  class="col-6 text-end fw-bolder"
+                  style="color: var(--Strong-cyan)"
+                >
+                  <h1 id="tipAmount">$0.00</h1>
+                </div>
+              </div>
+              <div class="row mt-5" style="color: white">
+                <div class="col-6">
+                  Total <br /><span class="opacity-50"> / person</span>
+                </div>
+                <div
+                  class="col-6 text-end fw-bolder"
+                  style="color: var(--Strong-cyan)"
+                >
+                  <h1 id="totalAmount">$0.00</h1>
+                </div>
+              </div>
+              <div class="d-grid mt-5" style="border-radius: 14px">
+                <button
+                  class="btn mt-5 mb-5"
+                  style="
+                    background-color: var(--Strong-cyan);
+                    font-size: 18px;
+                    font-weight: 600;
+                  "
+                  type="button"
+                >
+                  RESET
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Saravanan.A.R</a>.
+    </div>
+
+    <script>
+      const bill = document.querySelector("#bill");
+      const tips = document.querySelectorAll("input[type=radio]");
+      const customTips = document.querySelector("#customTip");
+      const peoples = document.querySelector("#people");
+
+      let tip = 0;
+      let billAmount = 0;
+      let customTip = 0;
+      let people = 0;
+
+      bill.addEventListener("input", (e) => {
+        billAmount = e.target.value;
+        tipsCalculator();
+      });
+
+      tips.forEach((t) => {
+        t.addEventListener("change", (e) => {
+          tip = e.target.id;
+          customTip = 0
+          tipsCalculator();
+        });
+      });
+
+      customTips.addEventListener("input", (e) => {
+        customTip = e.target.value;
+        tip = 0;
+        tipsCalculator();
+      });
+
+      peoples.addEventListener("input", (e) => {
+        people = e.target.value;
+        tipsCalculator();
+      });
+
+      function tipsCalculator() {
+        let tipAmount = document.querySelector("#tipAmount");
+        let totalAmount = document.querySelector("#totalAmount");
+
+        if (Number(billAmount) !== 0 && tip !== 0 && Number(customTip) === 0 && Number(people) !== 0){
+          customTip = 0
+          const tiptot =  (((Number(billAmount) * tip) + Number(billAmount)) / Number(people))
+          const tipAmt = Number(billAmount) / Number(tiptot)
+          totalAmount.textContent = `$${parseInt(tiptot)}`
+          tipAmount.textContent = `$${parseInt(tipAmt)}`
+
+        }else if (Number(billAmount) !== 0 && Number(customTip) !== 0 && Number(people) !== 0 && Number(tip) === 0){
+          if(customTip < 10) {
+            customTip = customTip / 10
+          }else {
+            customTip = customTip / 100
+          }
+          const tiptot =  (((Number(billAmount) * Number(customTip)) + Number(billAmount)) / Number(people))
+          const tipAmt = Number(billAmount) / Number(tiptot)
+          totalAmount.textContent = `$${parseInt(tiptot)}`
+          tipAmount.textContent = `$${parseInt(tipAmt)}`
+        }else {
+          return
+        }
+      }
+    </script>
+  </body>
+</html>
